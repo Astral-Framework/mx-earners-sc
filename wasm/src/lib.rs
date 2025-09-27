@@ -6,9 +6,9 @@
 
 // Init:                                 1
 // Upgrade:                              1
-// Endpoints:                            8
+// Endpoints:                           11
 // Async Callback (empty):               1
-// Total number of exported functions:  11
+// Total number of exported functions:  14
 
 #![no_std]
 
@@ -16,18 +16,21 @@ multiversx_sc_wasm_adapter::allocator!();
 multiversx_sc_wasm_adapter::panic_handler!();
 
 multiversx_sc_wasm_adapter::endpoints! {
-    contract
+    earners
     (
         init => init
         upgrade => upgrade
-        setEarner => set_earner
-        removeEarner => remove_earner
-        getEarnersInfo => get_earners_info
-        earners => earners
-        earnerName => earner_name
-        earnerPercentage => earner_percentage
-        earnersTotalPercentage => earners_total_percentage
-        sendFees => send_fees
+        addAdmins => add_admin
+        removeAdmins => remove_admin
+        isAdmin => is_admin
+        getAdmins => admins
+        pause => pause
+        unpause => unpause
+        getIsPaused => is_paused
+        distributeFees => distribute_fees
+        setEarners => set_earner
+        removeEarners => remove_earner
+        getEarners => get_earners_info
     )
 }
 

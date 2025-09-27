@@ -1,8 +1,34 @@
-mkdir reports > /dev/null 2>&1
-if [ -z $1 ]; then
+#!/bin/bash
+
+mkdir -p reports
+
+use_devnet() {
     source globals.devnet.sh
-elif [ $1 -eq 1 ]; then
+}
+
+use_mainnet() {
     source globals.mainnet.sh
-fi
+}
+
+## Select env
+case $1 in
+    "D")
+        echo "Use Devnet"
+        use_devnet
+        ;;
+    "1")
+        echo "Use Mainnet"
+        use_mainnet
+        ;;
+    *)
+        echo "Require MultiversX chain id (D, 1). Ex $0 D" && exit
+        ;;
+esac
+
 source snippets.sh
-############ START ############
+
+# Add your custom smart contract interactions below this line
+# Available functions: deploy, upgrade, changeOwnerAddress, claimDeveloperRewards, runTx
+# Example: deploy "$(./encode.sh arg1)@$(./encode.sh arg2)"
+
+######################## START ########################

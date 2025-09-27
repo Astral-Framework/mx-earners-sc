@@ -41,7 +41,7 @@ pub trait PauseModule: crate::admins::AdminsModule {
 
     // === Storage ===
 
-    #[view(getIsPaused)]
+    #[view(isPaused)]
     #[storage_mapper("is_paused")]
     fn is_paused(&self) -> SingleValueMapper<bool>;
 

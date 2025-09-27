@@ -98,7 +98,7 @@
             "outputs": []
         },
         {
-            "name": "getIsPaused",
+            "name": "isPaused",
             "mutability": "readonly",
             "inputs": [],
             "outputs": [

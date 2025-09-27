@@ -152,7 +152,7 @@ where
     ) -> TxTypedCall<Env, From, To, NotPayable, Gas, bool> {
         self.wrapped_tx
             .payment(NotPayable)
-            .raw_call("getIsPaused")
+            .raw_call("isPaused")
             .original_result()
     }
 

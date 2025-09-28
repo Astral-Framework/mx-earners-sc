@@ -156,11 +156,11 @@ where
             .original_result()
     }
 
-    pub fn distribute_fees(
+    pub fn distribute(
         self,
     ) -> TxTypedCall<Env, From, To, (), Gas, ()> {
         self.wrapped_tx
-            .raw_call("distributeFees")
+            .raw_call("distribute")
             .original_result()
     }
 

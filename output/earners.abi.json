@@ -108,7 +108,7 @@
             ]
         },
         {
-            "name": "distributeFees",
+            "name": "distribute",
             "mutability": "mutable",
             "payableInTokens": [
                 "*"

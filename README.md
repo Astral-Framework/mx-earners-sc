@@ -18,7 +18,7 @@ A smart contract that distributes payments (fees) to multiple addresses based on
 3. **Distribute Funds**: Automatically splits payment according to percentages
 4. **Handle Remainder**: Any leftover amount is sent back to the contract owner
 
-> **Note**: Total percentage allocation must equal exactly 100%
+> **Note**: Total percentage allocation should equal 100%. If it doesn't, the remaing percentage goes to the SC owner.
 
 ## Structure
 
@@ -47,8 +47,8 @@ wasm/              # WebAssembly build configuration
    - Address A: 30%
    - Address B: 50%
    - Address C: 20%
-3. **Send payment** to the contract
-4. **Automatic distribution** occurs based on percentages
+3. **Send payment** to the contract while calling the endpoint `distribute`.
+4. **Automatic distribution** occurs based on percentagesw 
 
 ## Use Cases
 

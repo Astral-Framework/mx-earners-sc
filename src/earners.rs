@@ -16,8 +16,8 @@ pub trait EarnersModule: crate::admins::AdminsModule + crate::pause::PauseModule
     // === Endpoints ===
 
     #[payable("*")]
-    #[endpoint(distributeFees)]
-    fn distribute_fees(&self) {
+    #[endpoint(distribute)]
+    fn distribute(&self) {
         let (token, amount) = self.call_value().egld_or_single_fungible_esdt();
         require!(amount > 0, ERROR_ZERO_AMOUNT);
 

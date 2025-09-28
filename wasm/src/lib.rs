@@ -27,7 +27,7 @@ multiversx_sc_wasm_adapter::endpoints! {
         pause => pause
         unpause => unpause
         isPaused => is_paused
-        distributeFees => distribute_fees
+        distribute => distribute
         setEarners => set_earner
         removeEarners => remove_earner
         getEarners => get_earners_info

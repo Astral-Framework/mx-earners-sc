@@ -34,7 +34,6 @@ common/
 ├── errors/         # Error definitions
 └── structs/        # Data structures
 
-interaction/        # Deployment and interaction scripts
 meta/              # Contract metadata
 output/            # Generated ABI and WASM files
 wasm/              # WebAssembly build configuration
